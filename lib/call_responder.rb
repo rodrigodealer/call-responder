@@ -7,6 +7,7 @@ class CallResponder < ActionController::Responder
         @request = @controller.request
         @format = @controller.formats.first
         @formats = [ :report ]
+        @config = YAML::load(File.open('config/responder.yml'))
     end
 
     def to_format
@@ -15,7 +16,7 @@ class CallResponder < ActionController::Responder
     end
 
     def to_pdf
-      stream = RestClient.post("http://198.199.91.129:9292/generate", 
+      stream = RestClient.post(@config["url"], 
         { 
           :file => controller.render_to_string(:formats => @formats) 
         }
