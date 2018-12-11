@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Rodrigo Oliveira"]
   s.email       = 'rodrigo.dealer@gmail.com'
   s.files       = ["lib/call_responder.rb"]
-  s.add_dependency "actionpack", "~> 4.0.0"
-  s.add_dependency "rest-client", "~> 1.6.7"
+  s.add_dependency "actionpack", "~> 4.2.5.1"
+  s.add_dependency "rest-client", "~> 1.8.0"
   s.homepage    =
     'https://github.com/rodrigodealer/call-responder'
   s.license       = 'MIT'
